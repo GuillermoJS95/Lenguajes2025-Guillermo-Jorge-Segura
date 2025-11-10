@@ -1,0 +1,30 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: auto;
+    max-width: 900px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Elegant_Background-17.jpg/1280px-Elegant_Background-17.jpg);
+    background-size: 1700px;
+}
+
+h2 {
+    color: rgb(138, 75, 24);
+    font-size: 300%;
+    font-family: Verdana, Geneva, sans-serif;
+    border: 6px solid;
+    border-color: rgb(0, 0, 0);
+    border-style: double;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+p {
+    color: aliceblue;
+    font-size: 125%
+}
+
+a {
+    color: aliceblue;
+}
+
+hr {border: 2px solid rgb(73, 62, 41);}
