@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        .icono{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>Formulario de contacto</title>
+</head>
+
+<body style="width:1000px ; margin: auto">
+    <h1>Formulario de Registro al Curso</h1>
+    <form name="formulario" action="proceso.php" method="get">
+        <p>
+            <label for="nombre">Nombre completo (requerido):</label>
+            <br>
+            <input type="text" name="Nombre" id="Nombre" required>
+        </p>
+        <p>
+            <label for="nemail">Correo electrónico (requerido):</label>
+            <br>
+            <input type="email" name="Correo electrónico" id="Correo" required>
+        </p>
+        <p>
+            <label for="edad">Edad:</label>
+            <br>
+            <input type="number" name="Edad" id="Edad" size="5">
+        </p>
+        <label for="Curso de interés">Curso de interés:</label>
+        <br>
+        <select id="cursodeinteres" name="cursos">
+            <option value="basic">Informática básica</option>
+            <option value="med">Informática media</option>
+            <option value="avz">Informática avanzada</option>
+            <option value="senior">Informática ultrasenior</option>
+        </select>
+
+        <p><label for="color">Turno preferido:</label>
+            <br>
+            <input type="radio" name="turno" id="mañ" value="mañana">Mañana
+            <br>
+            <input type="radio" name="turno" id="tard" value="tarde">Tarde
+        </p>
+        <input type="checkbox" name="condiciones" id="condiciones">Acepto las condiciones del curso.
+        <p>
+            <label for="comentarios">Comentarios adicionales:</label>
+            <br>
+            <textarea name="texto" id="2">Escribe aquí tus dudas o preferencias...</textarea>
+        </p>
+        <input type="submit" value="Enviar registro">
+
+    </form>
+
+         <div>
+    <a href="./indexforms.html"><img src="../../../images/volverindexnoprincipal.png" alt="Volver Index Tema4" class="icono"></a>
+    </div>
+</body>
+
+</html>

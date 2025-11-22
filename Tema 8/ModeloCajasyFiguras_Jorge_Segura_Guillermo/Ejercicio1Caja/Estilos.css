@@ -1,0 +1,121 @@
+table {
+  border-collapse: collapse;
+  width: 300px;
+  height: 300px;
+  margin-left: 32vmin;
+}
+td {
+  border: 1px solid #000;
+  padding: 0;
+}
+td div {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+h1 {
+  color: darkblue;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: darkblue;
+  text-align: center;
+}
+
+.caja {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  box-sizing: border-box;
+  color: darkblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.caja1 {
+  background-color: antiquewhite;
+  border-color: black;
+  border-style: dotted;
+  border-width: 5px;
+  padding-top: 10%;
+  padding-left: 10%;
+  
+}
+
+.caja2 {
+  border-left: 50px solid #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  background-color: yellow;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.caja3 {
+  border-width: 5px;
+  background-color: salmon;
+  border: 20px groove darksalmon;
+  border-radius: 12px;
+}
+
+.caja4 {
+  background: #3aaa3a;
+  border: 20px inset #002901;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  padding: 15px;
+}
+
+.caja5 {
+  background: #ffe4c4;
+  border: 5px dashed orange;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  font-size: 160px;
+  text-align: center;
+  line-height: 270px;
+  font-weight: bold;
+}
+
+.caja6 {
+  background: #e6e6ff;
+  border-top: 32px solid blue;
+  border-bottom: 32px solid darkblue;
+  border-left: 32px solid blue;
+  border-right: 32px solid darkblue;
+  line-height: 225px;
+  text-align: center;
+}
+
+.caja7 {
+  background: linear-gradient(to bottom, red, yellow);
+  border: 5px solid red;
+  border-bottom: 20px solid red;
+  text-align: center;
+  line-height: 200px;
+}
+
+.caja8 {
+  border-top: 32px solid yellow;
+  border-bottom: 32px solid red;
+  border-left: 32px solid blue;
+  border-right: 32px solid green;
+  background-color: white;
+}
+
+.caja9 {
+  background: white;
+  border: 32px double purple;
+  border-radius: 40px;
+  text-align: center;
+  line-height: 120px;
+}
+
+.icono{
+            width: 100px;
+            height: 100px;
+            margin-left: 790px;
+        }

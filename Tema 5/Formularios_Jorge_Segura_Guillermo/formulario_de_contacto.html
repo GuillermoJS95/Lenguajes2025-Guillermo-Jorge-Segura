@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        .icono{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>Formulario de contacto</title>
+</head>
+
+<body style="width:1000px ; margin: auto">
+    <h1>Formulario de Contacto</h1>
+    <form name="formulario" action="proceso.php" method="get">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="Nombre">
+        </p>
+        <p>
+            <label for="nemail">Email:</label>
+            <input type="email" name="Email">
+        </p>
+        <p>
+            <label for="asunto">Asunto:</label>
+            <input type="text" name="Asunto">
+        </p>
+        <p>
+            <label for="comentarios">Comentarios:</label>
+            <br>
+            <textarea name="texto" id="2"></textarea>
+        </p>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+     <div>
+    <a href="./indexforms.html"><img src="../../../images/volverindexnoprincipal.png" alt="Volver Index Tema4" class="icono"></a>
+    </div>
+
+</body>
+
+</html>

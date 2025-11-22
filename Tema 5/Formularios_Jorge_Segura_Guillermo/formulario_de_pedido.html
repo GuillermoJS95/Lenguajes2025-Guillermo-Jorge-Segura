@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        .icono{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>Formulario de contacto</title>
+</head>
+
+<body style="width:1000px ; margin: auto">
+    <h1>Formulario de Pedido</h1>
+    <form name="formulario" action="proceso.php" method="get">
+        <p>
+            <label for="nombre">Nombre completo:</label>
+            <br>
+            <input type="text" name="Nombre" id="Nombre">
+        </p>
+        <p>
+            <label for="nemail">Correo electrónico:</label>
+            <br>
+            <input type="email" name="Correo electrónico" id="Correo">
+        </p>
+        <p><label for="date">Fecha deseada de entrega:</label><br>
+            <input type="date" name="fecha" id="fecha">
+       <br>
+       <p>
+        <label for="date">Color del producto:</label><br>
+       <input type="color" name="color" id="color">
+       </p>
+       <p>
+        <label for="date">Cantidad (1 a 10):</label><br>
+        <input type="range" name="rango" id="rango">
+       </p>
+        <select id="cursodeinteres" name="cursos" multiple size="4">
+            <option value="basic">Funda Protectora</option>
+            <option value="med">Batería Adicional</option>
+            <option value="avz">Soporte de mesa</option>
+            <option value="senior">Kit de limpieza</option>
+        </select><br><br>
+        <input type="checkbox" name="condiciones" id="condiciones">Acepto los términos del pedido
+        <p>
+            <label for="comentarios">Comentarios adicionales:</label>
+            <br>
+            <textarea name="texto" id="2" cols="40" rows="5" placeholder="Escribe aquí tus dudas o preferencias..."></textarea>
+        </p>
+        <input type="submit" value="Enviar pedido">
+
+    </form>
+
+         <div>
+    <a href="./indexforms.html"><img src="../../../images/volverindexnoprincipal.png" alt="Volver Index Tema4" class="icono"></a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+* {
+  font-family: verdana;
+  font-size: 1.25 rem;
+}
+
+body {
+  margin: 0;
+  background-image: url(./images/fondo_ajedrez.jpg);
+  background-size: cover;
+}
+
+header,
+footer {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+a {
+  color: white;
+}
+img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.alreves {
+  transform: rotate(180deg);
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td,
+th {
+  width: 100px;
+  height: 100px;
+}
+
+.claro {
+  background-image: url(./images/madera_blanca.png);
+}
+
+.marron {
+  background-image: url(./images/madera_oscura.png);
+}
+
+.bordes {
+  background-image: url(./images/madera_borde.jpg);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
