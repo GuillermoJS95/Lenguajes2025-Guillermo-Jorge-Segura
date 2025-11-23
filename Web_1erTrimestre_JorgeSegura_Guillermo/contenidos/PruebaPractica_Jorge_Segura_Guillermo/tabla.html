@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <style> table, th, td {   border: 1px solid black;   border-collapse: collapse; } 
+        th{background:#f1f5f9;}
+        body {width: 1000px; margin:auto;}
+         .icono{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>Evaluación Tablas</title>
+</head>
+<body>
+    <h1>Prueba de tablas HTML</h1>
+    <div>
+        <table>
+            <caption>Titulo de Tabla: Resultados de un experimento</caption>
+             <tr>
+    <th colspan="5">Encabezado Principal</th>
+  </tr>
+  <tr>
+    <th>Item</th>
+    <th>Medida</th>
+    <th>Formula | Nota</th>
+    <th>Observaciones</th>
+  </tr>
+  <tr>
+    <td rowspan="2"><b>Muesta A</b> <br><small>(ID: A1)</small></td>
+    <td>12.3</td>
+    <td>H<sub>2</sub>O (agua)</td>
+    <td>Temperatura estable</td>
+  </tr>
+  <tr>
+    <td>11.8</td>
+    <td>NaCl (sal) <i>concentración baja</i></td>
+    <td>Ligera variación</td>
+  </tr>
+   <tr>
+    <td><b>Muestra B</b></td>
+    <td colspan="2">Promedio combinado: 9.7</td>
+    <td>Repetir medición</td>
+  </tr>
+   <tr>
+    <td rowspan="2"><b>Muestra C</b></td>
+    <td rowspan="2" colspan="2">Resultado complejo:<br>Valor=5·10<sup>3</sup></td>
+    <td>Observacion 1</td>
+  </tr>
+  <tr>
+    <td>Observación 2: cambio gradual</td>
+  </tr>
+  <tr>
+    <td colspan="2"><b>Muestra D</b></td>
+    <td><mark>Sin medida</mark></td>
+    <td>E= m c <sup>2</sup></td>
+  </tr>
+  <tr>
+    <td>Control</td>
+    <td>0.0</td>
+    <td>pH &#60; 7</td>
+    <td rowspan="2">Comparación con control</td>
+  </tr>
+  <tr>
+    <td>Blank</td>
+    <td>0.1</td>
+    <td>pH &#62; 7</td>
+  </tr>
+  <tr>
+    <td colspan="5">Nota: los datos son inventados y sirven únicamente para practicar estructuras de tablas en HTML.</td>
+  </tr>
+        </table>
+    </div>
+
+    <div>
+    <a href="../PruebaPractica_Jorge_Segura_Guillermo/indexPruebaPractica.html"><img src="../../../images/volverindexnoprincipal.png" alt="Volver Index Tema4" class="icono"></a>
+    </div>
+</body>
+</html>

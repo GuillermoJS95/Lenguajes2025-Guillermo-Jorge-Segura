@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ff8800;
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+main.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+main.container section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+main.container h2 {
+  font-size: 1.6em;
+  color: #222;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+main.container p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.font-system {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("../fonts/VeraSeBd.ttf");
+}
+
+.font-local {
+  font-family: Bitstream Vera Serif Bold;
+}
+
+.font-google {
+  font-family: 'Bruno Ace SC', cursive;
+  text-transform: uppercase;
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+}
+
+.icono{
+position: absolute;
+top:0%;
+right:10%;
+width: 100px;
+height: 100px;
+        }

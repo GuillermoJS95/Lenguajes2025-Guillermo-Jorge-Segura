@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <style>
+        body {width: 1000px; margin: auto;}
+
+         .icono{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>Evaluación formularios</title>
+</head>
+
+<body>
+   
+        <h1>Evaluación de Formularios en HTML</h1>
+    
+        <p>Completa este formulario para practicar los distintos tipos de campos y validaciones básicas de HTML5.</p>
+        <br>
+        <form name="formulario" action="procesar.php" method="post">
+        <p><label for="nombre">Nombre completo *</label>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Introduce tu nombre" required>
+        </p>
+        <p>
+            <label for="email">Correo electrónico*</label>
+            <input type="email" name="CorreoElectrónico" id="email" placeholder="nombre@ejemplo.com" required>
+        </p>
+        <p>
+            <label for="password">Contraseña*</label>
+        <input type="password" id="password" name="Contraseña" placeholder="Introduce tu contraseña" required>
+        </p>
+        <p>
+            <label for="Provincias">Provincia (Andalucía)</label>
+        <select id="provincia" name="lugar">
+            <option value="Provincias">Selecciona una provincia</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Jaen">Jaen</option>
+            <option value="Granada">Granada</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Cádiz">Cádiz</option>
+            <option value="Málaga">Málaga</option>
+            <option value="Huelva">Huelva</option>
+            <option value="Almería">Almería</option>
+        </select>
+        </p>
+        <p>
+            <label for="sexualidad">Sexo</label> <br>
+        <input type="radio" id="opcion1" name="sexualidad" value="Hombre"> Hombre
+        <input type="radio" id="opcion2" name="sexualidad" value="Mujer"> Mujer
+        <input type="radio" id="opcion3" name="sexualidad" value="OtraCosa" checked> Prefiero no decirlo
+        </p>
+        <p>
+        <label for="number">Cantidad (entre 2 y 6)</label>
+        <input type="number" id="number" name="CantidadMinMax" min="2" max="6" step="1" placeholder="&gt;2, &lt;6" size="3px">
+        </p>
+        <p>
+            <input type="checkbox" id="checkbox" name="CasillaCheck" value="valor" required>
+            <label for="checkbox">Acepto las condiciones de uso</label>
+        </p>
+        <p>
+        <input type="submit" value="Enviar formulario">
+        </p>
+        <p>Nota: todos los campos marcados con * son obligatorios.</p>
+        </form>
+
+           <div>
+    <a href="../PruebaPractica_Jorge_Segura_Guillermo/indexPruebaPractica.html"><img src="../../../images/volverindexnoprincipal.png" alt="Volver Index Tema4" class="icono"></a>
+    </div>
+    
+</body>
+
+</html>
