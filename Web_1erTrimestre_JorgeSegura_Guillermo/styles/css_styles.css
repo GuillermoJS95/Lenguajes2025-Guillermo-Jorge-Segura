@@ -38,39 +38,31 @@ footer {
 .main-header {
     position: absolute;
     top: 1%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
+    left: 15%;
 
     /* DIMENSIONES DEL BANNER */
     width: 1200px; 
     height: 100px; 
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/PruebaBanner2.png);
-    background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 20px;
     border: dashed grey;
+}   
 
-    justify-content: center;
-    align-items: center;
-    cursor: default;
-    
-}
 .main-header img{
   height: 90%;
   width: 80%;
-  object-fit: cover;
     cursor:url(../images/hand.cur), pointer;
 }
+
 .contenedor-enlaces {
-    display:flex;
+    display:flex; /* Esto transforma un elemento en un contenedor, permitiendome alinear los elementos del nav  */
     margin-top: 0px; 
     margin-left: 20px;
-    
 }
 
 .enlace:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón*/
         cursor:url(../images/hand.cur), pointer;
 }
 
@@ -81,35 +73,24 @@ footer {
 
 .mapa-principal-container {
     position: absolute;
-    top: 100px; 
-    bottom: 2vw; 
-    left: 0;
+    top: 4%; 
+    bottom: 2%; 
+    left: 2.5%;
     right: 0;
-    transform: scale(0.75);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: scale(0.75); /* Para hacer más pequeño el contenedor del mapa*/
 }
 
 .mapa-contenido {
-    position: relative;
+    position: relative; /* Para que dependa del contenedor */
     
-    /* === CAMBIOS APLICADOS AQUÍ === */
-    /* Aseguramos que ocupe el 100% del ancho disponible en el contenedor padre */
-    width: 96%; /* Ajustado al 96% para dejar un margen lateral del 2% a cada lado si el contenedor es grande */
-    max-width: 100%; /* Permitimos que se estire hasta el límite del contenedor principal */
-    
+    width: 94%; /* Ajustado para que quepa bien en el contenedor */  
     height: 0; 
-    /* Esta proporción (50%) es crucial. AJÚSTALA si la imagen del mapa no es 2:1 */
     padding-bottom: 50%; 
-    /* ============================== */
 
     background-image: url(../images/Mapa1.png);
     background-size: cover; 
     background-repeat: no-repeat;
-    
-    /* Estilos de borde y sombra se mantienen */
+    /* Estilos de borde y sombra  */
     border: 8px solid #8B4513; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 0 0 5px rgba(139, 69, 19, 0.5);
     border-radius: 5px; 
@@ -201,7 +182,3 @@ footer {
 .p8 { top: 30%; left: 88%; } 
 .p9 { top: 42%; left: 38%; } 
 .p10 { top: 8%; left: 73%; }
-
-/* ------------------------------------ */
-/* 6. Para el resto de Index de los temas */
-/* ------------------------------------ */
