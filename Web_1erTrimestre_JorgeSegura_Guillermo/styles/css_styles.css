@@ -9,6 +9,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    cursor: url(../images/sword.cur), default;
 }
 
 body {
@@ -52,20 +53,25 @@ footer {
 
     justify-content: center;
     align-items: center;
+    cursor: default;
+    
 }
 .main-header img{
   height: 90%;
   width: 80%;
   object-fit: cover;
+    cursor:url(../images/hand.cur), pointer;
 }
 .contenedor-enlaces {
     display:flex;
     margin-top: 0px; 
-    margin-left: 20px; 
+    margin-left: 20px;
+    
 }
 
 .enlace:hover {
     transform: scale(1.1);
+        cursor:url(../images/hand.cur), pointer;
 }
 
 
@@ -143,6 +149,7 @@ footer {
     width: 150%;
     height: 150%;
     transition: transform 0.3s ease;
+    cursor:url(../images/hand.cur), pointer;
 }
 
 .punto-interes img:hover {
