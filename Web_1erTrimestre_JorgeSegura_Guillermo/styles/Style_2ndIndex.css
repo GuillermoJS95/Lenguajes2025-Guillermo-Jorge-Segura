@@ -1,6 +1,6 @@
 /* --- Estilos Generales (Mantenidos) --- */
 body{
-    background-image: url(../../../images/fondosinmapa.png);
+    background-image: url(../../images/Fondito.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -54,8 +54,10 @@ table.nav-table {
     margin-bottom: 5px;
 }
 
-.icono:hover{
-    transform: scale(1.2);
+.iconos{
+            width: 200px;
+            height: 200px;
+            margin-left: 750px;
 }
 
 
