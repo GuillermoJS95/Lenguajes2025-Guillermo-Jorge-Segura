@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    height: 100%;
+}
+
+div.azul {
+    background-color: blue;
+    width: 100%;
+    height: 20%;
+}
+
+div.rojo {
+    background-color: red;
+    width: 50%;
+    height: 60%;
+    float: left;
+}
+
+div.verde {
+    background-color: green;
+    width: 50%;
+    height: 60%;
+    float: right;
+}
+
+div.amarillo {
+    background-color: yellow;
+    clear: both;
+    width: 100%;
+    height: 20%;
+}
+.link-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+}
+
+.link-container a {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    box-sizing: content-box;
+    padding: 15px 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #f1c40f;
+    background-color: #5c3a21;
+    border: 4px solid #8b5a2b;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 4px 4px 0px #000;
+    text-shadow: 2px 2px 0px #000;
+    transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+}
+
+.link-container a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+    background-color: #6d4a2d;
+}

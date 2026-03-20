@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+    background-color: blue;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 80px;
+  }
+  .sticky {
+    position: sticky;
+    top: 0;
+    background-color: gray;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    z-index: 1000;
+  }
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+  }
+  .rojo {
+    background-color: red;
+    flex: 1;
+    height: 100%;
+  }
+  .verde {
+    background-color: green;
+    flex: 2;
+    height: 100%;
+  }
+  .amarillo {
+    background-color: yellow;
+    flex: 3;
+    height: 100%;
+    position: relative;
+  }
+  .naranja {
+    background-color: orange;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+  }
+  .morado {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    bottom: 75px;
+    right: 100px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .link-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+}
+
+.link-container a {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    box-sizing: content-box;
+    padding: 15px 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #f1c40f;
+    background-color: #5c3a21;
+    border: 4px solid #8b5a2b;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 4px 4px 0px #000;
+    text-shadow: 2px 2px 0px #000;
+    transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+}
+
+.link-container a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+    background-color: #6d4a2d;
+}
