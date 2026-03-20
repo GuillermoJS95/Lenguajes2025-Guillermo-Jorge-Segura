@@ -3,68 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Segundo Trimestre</title>
+    <title>Mapa Overworld 2D - Segundo Trimestre</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="contenedor-principal">
-        <header class="cabecera-retro">
-            <h1 class="titulo-cabecera">SEGUNDO TRIMESTRE</h1>
-            <a href="../index.html" class="boton-retro boton-volver">VOLVER AL INICIO</a>
+        
+        <!-- Cabecera UI Clásica -->
+        <header class="cabecera-jrpg">
+            <div class="marco-madera">
+                <h1 class="titulo-cabecera">★ SEGUNDO TRIMESTRE ★</h1>
+                <a href="../index.html" class="boton-accion">INICIO</a>
+            </div>
         </header>
 
-        <nav class="navegacion-superior">
-            <a href="#" class="elemento-menu"><div class="icono-menu" style="background-image: url('./posicionamientos/posicionamientos/images/t2_nav_ajedrez.png');"></div> Ajedreces</a>
-            <a href="./posicionamientos/posicionamientos/index.html" class="elemento-menu">Posicionamientos</a>
-            <a href="#" class="elemento-menu">Dados</a>
-            <a href="#" class="elemento-menu">Ejemplo 1</a>
-            <a href="#" class="elemento-menu">Ejemplo 2</a>
-            <a href="#" class="elemento-menu">Ejemplo 3</a>
-            <a href="#" class="elemento-menu">Ejemplo 4</a>
-            <a href="#" class="elemento-menu">Ejemplo 5</a>
+        <!-- Menú de Opciones RPG -->
+        <nav class="menu-inventario">
+            <div class="marco-madera flex-row">
+                <a href="#" class="item-inventario">Ajedreces</a>
+                <a href="./posicionamientos/posicionamientos/index.html" class="item-inventario select">Posicionamientos</a>
+                <a href="#" class="item-inventario">Dados</a>
+                <a href="#" class="item-inventario">Ejemplo 1</a>
+                <a href="#" class="item-inventario">Ejemplo 2</a>
+                <a href="#" class="item-inventario">Ejemplo 3</a>
+                <a href="#" class="item-inventario">Ejemplo 4</a>
+                <a href="#" class="item-inventario">Ejemplo 5</a>
+            </div>
         </nav>
 
-        <main class="contenedor-mapa">
-            <div class="marco-mapa">
-                <div class="lienzo-mapa">
+        <!-- Overworld Map 2D -->
+        <main class="zona-mapa">
+            <div class="marco-madera marco-grande">
+                
+                <!-- Lienzo de Hierba Pixel -->
+                <div class="lienzo-overworld">
                     
-                    <!-- Maguito Guía -->
-                    <div class="punto-interes p-maguito" data-info="¡Bienvenido al Segundo Trimestre! Selecciona un poblado en el mapa interactivo o en el menú superior para acceder a mis pruebas. ¡Suerte!">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/Maguito.png" alt="Mago Guía">
+                    <div class="camino-tierra"></div> <!-- Ruta decorativa CSS -->
+
+                    <!-- NPCs y Lugares (Temporal usando sprites T1 para visualizar el layout) -->
+                    
+                    <div class="npc-guia" data-dialogo="...Has vuelto al mapa 2D. Esta será la base para nuestros nuevos sprites mañana.">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/Maguito.png" alt="Mago">
                     </div>
 
-                    <!-- Tokens del Mapa convertidos a Poblados PNGs nativos -->
-                    <a href="#" class="nodo-mapa nodo-1" data-label="Ajedreces">
-                        <img src="./posicionamientos/posicionamientos/images/t2_map_ajedrez.png" alt="Ajedreces">
+                    <a href="#" class="locacion-mapa loc-dados">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p7Cueva.png" alt="Placeholder Dados">
+                        <span class="letrero">Templo Dados</span>
                     </a>
-                    
-                    <a href="./posicionamientos/posicionamientos/index.html" class="nodo-mapa nodo-2" data-label="Posicionamientos">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p4esfinge.png" alt="Esfinge">
+
+                    <a href="./posicionamientos/posicionamientos/index.html" class="locacion-mapa loc-posiciones">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p4esfinge.png" alt="Placeholder Posicionamientos">
+                        <span class="letrero">Desierto CSS</span>
                     </a>
-                    
-                    <a href="#" class="nodo-mapa nodo-3" data-label="Dados">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p7Cueva.png" alt="Cueva">
+
+                    <a href="#" class="locacion-mapa loc-ajedrez">
+                        <img src="./posicionamientos/posicionamientos/images/t2_map_ajedrez.png" alt="Torre Ajedrez">
+                        <span class="letrero">Castillo Ajedrez</span>
                     </a>
-                    
-                    <a href="#" class="nodo-mapa nodo-4" data-label="Ejemplo 1">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p1bosque.png" alt="Pueblo 1">
+
+                    <a href="#" class="locacion-mapa loc-ej1">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p1bosque.png" alt="Ej 1">
+                        <span class="letrero">Ejemplo 1</span>
                     </a>
-                    
-                    <a href="#" class="nodo-mapa nodo-5" data-label="Ejemplo 2">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p2casitas.png" alt="Pueblo 2">
+
+                    <a href="#" class="locacion-mapa loc-ej2">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p2casitas.png" alt="Ej 2">
+                        <span class="letrero">Ejemplo 2</span>
                     </a>
-                    
-                    <a href="#" class="nodo-mapa nodo-6" data-label="Ejemplo 3">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p3pantano.png" alt="Pantano">
+
+                    <a href="#" class="locacion-mapa loc-ej3">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p3pantano.png" alt="Ej 3">
+                        <span class="letrero">Ejemplo 3</span>
                     </a>
-                    
-                    <a href="#" class="nodo-mapa nodo-7" data-label="Ejemplo 4">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p5castillo.png" alt="Castillo">
+
+                    <a href="#" class="locacion-mapa loc-ej4">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p5castillo.png" alt="Ej 4">
+                        <span class="letrero">Ejemplo 4</span>
                     </a>
-                    
-                    <a href="#" class="nodo-mapa nodo-8" data-label="Ejemplo 5">
-                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p6casaruinas.png" alt="Ruinas">
+
+                    <a href="#" class="locacion-mapa loc-ej5">
+                        <img src="../Web_1erTrimestre_JorgeSegura_Guillermo/images/p6casaruinas.png" alt="Ej 5">
+                        <span class="letrero">Ejemplo 5</span>
                     </a>
 
                 </div>
