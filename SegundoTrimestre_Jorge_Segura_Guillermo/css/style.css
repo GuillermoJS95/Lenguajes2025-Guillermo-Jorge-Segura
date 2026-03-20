@@ -1,4 +1,3 @@
-/* CSS - Auténtica esencia RPG 16-bits 2D Clásica */
 body, html {
     margin: 0; padding: 0; width: 100%; height: 100%;
     background-color: #000;
@@ -7,16 +6,14 @@ body, html {
 
 .contenedor-principal {
     display: flex; flex-direction: column; height: 100vh;
-    /* Fondo de pantalla de juego */
     background-image: url(../../images/wood_texture.png);
     background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(20, 10, 5, 0.8);
 }
 
-/* MARCOS RPG (Cajas de diálogo de Final Fantasy / Zelda) */
 .marco-madera {
-    background-color: #0b1a0d; /* Fondo panel muy oscuro */
+    background-color: #0b1a0d;
     border: 6px solid;
     border-image: linear-gradient(to bottom right, #f1c40f, #8b5a2b, #f1c40f) 1;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 5px 5px 0px rgba(0,0,0,1);
@@ -24,7 +21,6 @@ body, html {
     image-rendering: pixelated;
 }
 
-/* Header */
 .cabecera-jrpg {
     display: flex; justify-content: center;
 }
@@ -41,7 +37,6 @@ body, html {
 }
 .boton-accion:hover { background-color: #b57a3e; transform: translate(2px, 2px); box-shadow: 0 0 0 #000; }
 
-/* Navegación RPG (Inventario/Zonas) */
 .menu-inventario {
     display: flex; justify-content: center; z-index: 10;
 }
@@ -57,7 +52,6 @@ body, html {
     color: #f1c40f; border-bottom: 2px solid #f1c40f;
 }
 
-/* AREA MAPA */
 .zona-mapa {
     flex-grow: 1; display: flex; justify-content: center; align-items: center; padding-bottom: 20px;
 }
@@ -66,10 +60,9 @@ body, html {
     padding: 0; position: relative; overflow: hidden;
 }
 
-/* TILE MAP PATTERN (Césped pixelado clásico CERO IMAGENES) */
 .lienzo-overworld {
     width: 100%; height: 100%; position: relative;
-    background-color: #2b702e; /* Base Grass */
+    background-color: #2b702e;
     background-image: 
         radial-gradient(#3a8a3f 15%, transparent 16%),
         radial-gradient(#215c23 15%, transparent 16%);
@@ -79,7 +72,6 @@ body, html {
     box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
 }
 
-/* Camino de Tierra Pixelado */
 .camino-tierra {
     position: absolute; top: 30%; left: 10%; width: 80%; height: 40%;
     background-color: #a37240;
@@ -87,7 +79,6 @@ body, html {
     border-radius: 40px; opacity: 0.8;
 }
 
-/* SPRITES Y LUGARES (Estilo RPG Antiguo) */
 .locacion-mapa {
     position: absolute; display: flex; flex-direction: column; align-items: center;
     text-decoration: none; transition: transform 0.1s; z-index: 5;
@@ -97,7 +88,6 @@ body, html {
     image-rendering: pixelated; transition: 0.2s;
 }
 
-/* El clásico letreo JRPG que flota debajo de la locación */
 .letrero {
     background-color: rgba(0,0,0,0.85); color: white;
     border: 2px solid #a37240; font-size: 8px; padding: 4px 6px;
@@ -105,12 +95,10 @@ body, html {
     box-shadow: 2px 2px 0 rgba(0,0,0,0.8);
 }
 
-/* Hover RPG (pequeño salto) */
 .locacion-mapa:hover { transform: translateY(-5px); z-index: 10; }
 .locacion-mapa:hover img { filter: drop-shadow(0 10px 0px rgba(0,0,0,0.4)) drop-shadow(0 0 8px rgba(241, 196, 15, 0.4)); }
 .locacion-mapa:hover .letrero { border-color: #f1c40f; color: #f1c40f; }
 
-/* Coordenadas 2D Planas (Overworld Coordinates) */
 .loc-dados { top: 20%; left: 15%; }
 .loc-posiciones { top: 50%; left: 40%; }
 .loc-ajedrez { top: 20%; left: 70%; }
@@ -120,7 +108,6 @@ body, html {
 .loc-ej4 { top: 50%; left: 80%; }
 .loc-ej5 { top: 50%; left: 15%; }
 
-/* NPC (Interactuable clásico) */
 .npc-guia {
     position: absolute; bottom: 10px; right: 20px; z-index: 20;
 }
@@ -130,7 +117,6 @@ body, html {
 }
 @keyframes bounceIdle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 
-/* Caja de diálogo estilo RPG retro */
 .npc-guia::after {
     content: attr(data-dialogo);
     position: absolute; bottom: 70px; right: 0; width: 220px;
@@ -139,7 +125,6 @@ body, html {
     padding: 10px; line-height: 1.5; border-radius: 4px;
     box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
     opacity: 0; visibility: hidden; transition: 0.1s;
-    /* Efecto "typing" visual (simulando aparición de diálogo) */
 }
 .npc-guia:hover::after {
     opacity: 1; visibility: visible;
