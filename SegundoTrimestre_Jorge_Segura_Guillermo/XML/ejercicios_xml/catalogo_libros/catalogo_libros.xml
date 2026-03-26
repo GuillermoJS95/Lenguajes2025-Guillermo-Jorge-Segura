@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo_libros.xsd">
+    <catalogo>
+        <libro>
+            <titulo>1984</titulo>
+            <autor>George Orwell</autor>
+            <año>1949</año>
+            <genero>Distopía</genero>
+            <descripcion>Una novela sobre la vigilancia estatal y el totalitarismo.</descripcion>
+        </libro>
+        
+        <libro>
+            <titulo>El Señor de los Anillos</titulo>
+            <autor>J.R.R. Tolkien</autor>
+            <año>1954</año>
+            <genero>Fantasía</genero>
+            <descripcion>La épica lucha por destruir el Anillo Único en la Tierra Media.</descripcion>
+        </libro>
+
+        <libro>
+            <titulo>Un mundo feliz</titulo>
+            <autor>Aldous Huxley</autor>
+            <año>1932</año>
+            <genero>Distopía</genero>
+            <descripcion>Una sociedad gestionada mediante la genética y el condicionamiento.</descripcion>
+        </libro>
+    </catalogo>
+</libros>

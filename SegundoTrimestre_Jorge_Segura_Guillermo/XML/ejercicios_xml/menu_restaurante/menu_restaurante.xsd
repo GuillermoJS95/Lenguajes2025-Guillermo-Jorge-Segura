@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="menu">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="plato" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="precio" type="xs:decimal"/>
+
+                            <xs:element name="primero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="gazpacho andaluz"/>
+                                        <xs:enumeration value="ensalada de burrata"/>
+                                        <xs:enumeration value="sopa de picadillo"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <xs:element name="segundo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="xs:string"/>
+                                        <xs:enumeration value="merluza a la plancha"/>
+                                        <xs:enumeration value="entrecot de ternera"/>
+                                        <xs:enumeration value="lasaña vegetal"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

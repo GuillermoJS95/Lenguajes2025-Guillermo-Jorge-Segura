@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <title>Resumen de XML - Tema 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primario: #2c3e50;
+            --color-secundario: #e67e22;
+            --color-fondo: #f4f7f6;
+            --color-texto: #333;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--color-primario);
+            color: var(--blanco);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .introduccion {
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .boton-volver-retro {
+            display: inline-block;
+            background-color: #5c3a21;
+            color: #f1c40f;
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 4px solid #8b5a2b;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            box-shadow: 4px 4px 0px #000;
+            margin-top: 20px;
+            transition: 0.1s;
+        }
+        
+        .boton-volver-retro:hover {
+            background-color: #6d4a2d;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 #000;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .seccion-contenido {
+            background: var(--blanco);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--color-secundario);
+            border-bottom: 2px solid var(--color-secundario);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--color-primario);
+        }
+
+        .lista-puntos {
+            list-style-type: square;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .bloque-codigo {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .tabla-datos {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .tabla-datos, .tabla-datos th, .tabla-datos td {
+            border: 1px solid #ddd;
+        }
+
+        .tabla-datos th, .tabla-datos td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .tabla-datos th {
+            background-color: #f2f2f2;
+        }
+
+        .contenedor-enlaces {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .contenedor-enlaces a {
+            flex: 1 1 calc(33.333% - 10px);
+            min-width: 150px;
+            padding: 12px;
+            background-color: var(--color-secundario);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .contenedor-enlaces a:hover {
+            background-color: #d35400;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Resumen de XML</h1>
+        <p class="introduccion">Importancia de XML: Lenguaje clave para describir y compartir datos de forma estructurada.</p>
+        <a href="../../index.html" class="boton-volver-retro">Volver al Mapa</a>
+    </header>
+
+    <main>
+        <section class="seccion-contenido">
+            <h2>Conceptos Clave de XML</h2>
+            <p>XML (Lenguaje de Marcado Extensible) es un estándar del W3C diseñado para transportar y almacenar datos, no para mostrarlos. A diferencia de HTML, las etiquetas no están predefinidas.</p>
+            <ul class="lista-puntos">
+                <li><strong>Estructura:</strong> Basada en un árbol jerárquico con un solo nodo raíz.</li>
+                <li><strong>Bien formado:</strong> Cumple reglas sintácticas como el cierre de etiquetas y distinción de mayúsculas.</li>
+                <li><strong>Validación:</strong> Proceso para verificar si el archivo sigue las reglas de un DTD o XSD.</li>
+            </ul>
+        </section>
+
+        <section class="seccion-contenido">
+            <h2>Sintaxis y Estructura</h2>
+            <p>Un documento XML consta de un <strong>Prólogo</strong> (declaración de versión y codificación) y un <strong>Cuerpo</strong> (árbol de contenido).</p>
+            <h3>Ejemplo de Elemento:</h3>
+            <code class="bloque-codigo">
+&lt;libro paginas="450"&gt;
+    &lt;titulo&gt;Título del Libro&lt;/titulo&gt;
+    &lt;autor&gt;Nombre del Autor&lt;/autor&gt;
+&lt;/libro&gt;
+            </code>
+        </section>
+
+        <section class="seccion-contenido">
+            <h2>Validación con DTD</h2>
+            <p>La DTD (Definición de Tipo de Documento) establece las reglas de qué elementos y atributos pueden aparecer.</p>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Símbolo</th>
+                    <th>Cardinalidad / Regla</th>
+                </tr>
+                <tr>
+                    <td><code>?</code></td>
+                    <td>0 o 1 vez (Opcional)</td>
+                </tr>
+                <tr>
+                    <td><code>*</code></td>
+                    <td>0 a muchas veces</td>
+                </tr>
+                <tr>
+                    <td><code>+</code></td>
+                    <td>1 a muchas veces (Al menos uno)</td>
+                </tr>
+                <tr>
+                    <td><code>(A|B)</code></td>
+                    <td>Elemento A o elemento B (pero no ambos)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="seccion-contenido">
+            <h2>Ejercicios Realizados</h2>
+            <p>A continuación, se presentan los enlaces a los distintos esquemas XML desarrollados:</p>
+            <div class="contenedor-enlaces">
+                <a href="../concesionario/concesionario.xml">Concesionario</a>
+                <a href="../ejercicios_xml/agenda_contactos/agenda_contactos.xml">Agenda</a>
+                <a href="../ejercicios_xml/catalogo_libros/catalogo_libros.xml">Catalogo</a>
+                <a href="../ejercicios_xml/dni/dni.xml">DNI</a>
+                <a href="../ejercicios_xml/menu_restaurante/menu_restaurante.xml">Menu</a>
+                <a href="../ejercicios_xml/tarjeta_credito/tarjeta_credito.xml">Tarjeta Credito</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Guillermo Jorge Segura</p>
+    </footer>
+
+</body>
+</html>

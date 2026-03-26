@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dni">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona" minOccurs="1" maxOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            
+                            <xs:element name="nombre" />
+                            <xs:element name="apellidos" />
+                            <xs:element name="numero_nif"/>
+                            <xs:element name="nacionalidad" />
+                            
+                            <xs:choice minOccurs="0">
+                                <xs:element name="fecha_nacimiento" />    
+                                <xs:element name="edad" />
+                            </xs:choice>
+
+                            <xs:element name="sexo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Hombre"/>
+                                        <xs:enumeration value="Mujer"/>
+                                    </xs:restriction>
+                                </xs:simpleType>  
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

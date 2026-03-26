@@ -1,131 +1,206 @@
 body, html {
     margin: 0; padding: 0; width: 100%; height: 100%;
     background-color: #000;
-    color: white; font-family: 'Press Start 2P', monospace;
+    color: #f4f0d8; font-family: 'Press Start 2P', monospace;
+    overflow: hidden; /* Avoid scroll */
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 .contenedor-principal {
-    display: flex; flex-direction: column; height: 100vh;
-    background-image: url(../../images/wood_texture.png);
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-color: rgba(20, 10, 5, 0.8);
+    display: grid;
+    justify-content: center; /* Centramos todo el bloque de la cuadrícula en la pantalla */
+    align-content: stretch;
+    grid-template-columns: 220px minmax(600px, 1200px); /* Tamaño original del sidebar */
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "header header"
+        "nav map";
+    gap: 15px; /* Separación un poco más corta entre menú y mapa */
+    padding: 2vh 2vw; /* Aire dinámico con base a la pantalla */
+    height: 100vh; /* Que ocupe 100 de la pantalla exacto, sin scrolling */
+    min-height: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/imgs_index/MapaFondo.png);
+    background-size: 100% 100%; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
 
-.marco-madera {
-    background-color: #0b1a0d;
-    border: 6px solid;
-    border-image: linear-gradient(to bottom right, #f1c40f, #8b5a2b, #f1c40f) 1;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 5px 5px 0px rgba(0,0,0,1);
-    padding: 15px; margin: 10px;
-    image-rendering: pixelated;
-}
-
+/* Header */
 .cabecera-jrpg {
-    display: flex; justify-content: center;
+    grid-area: header;
+    display: flex; justify-content: center; width: 100%;
 }
 .cabecera-jrpg .marco-madera {
     display: flex; justify-content: space-between; align-items: center;
-    width: 90%; max-width: 1000px;
-    padding: 10px 20px;
+    width: 100%; height: 10vh; min-height: 60px; max-height: 90px; /* Se autoajustará */
+    box-sizing: border-box;
+    padding: 0 4vw;
+    background-image: url(../images/imgs_index/TexturaMadera.png);
+    background-size: cover; background-position: center; background-repeat: repeat;
+    background-color: #3e2723;
+    border: 4px solid #8b5a2b;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.8), 0 8px 20px rgba(0,0,0,0.8);
 }
-.titulo-cabecera { color: #f1c40f; text-shadow: 2px 2px 0 #000; font-size: 16px; margin: 0; }
+.titulo-cabecera { 
+    color: #f4f0d8; text-shadow: 3px 3px 0 #000; font-size: clamp(14px, 2vw, w20px); margin: 0; 
+}
 .boton-accion { 
-    background-color: #8b5a2b; color: white; border: 2px solid #f1c40f;
-    padding: 8px 12px; font-size: 10px; text-decoration: none;
-    box-shadow: 2px 2px 0 #000; transition: 0.1s;
+    background-color: rgba(20, 15, 10, 0.9); color: #f4f0d8; border: 2px solid #a37240;
+    padding: 1.5vh 2vw; font-size: clamp(10px, 1.2vw, 12px); text-decoration: none;
+    border-radius: 4px; transition: 0.2s; box-shadow: 0 4px 8px rgba(0,0,0,0.8);
 }
-.boton-accion:hover { background-color: #b57a3e; transform: translate(2px, 2px); box-shadow: 0 0 0 #000; }
+.boton-accion:hover { background-color: #5c3b20; transform: translateY(-2px); }
 
+/* Menú Sidebar: Dispuesto en vertical junto al mapa */
 .menu-inventario {
-    display: flex; justify-content: center; z-index: 10;
+    grid-area: nav;
+    display: flex; justify-content: flex-start; /* Rellena la columna */
+    align-items: stretch; /* Rellena el height igual al mapa */
+    min-height: 0;
 }
 .menu-inventario .marco-madera {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-    width: 90%; max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Aprovecha su columna de grid por completo para reducir el gap excesivo */
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 2vh 0; /* Dinámico */
+    gap: 1.5vh;
+    background-image: url(../images/imgs_index/TexturaPiedra.png);
+    background-size: cover; background-position: center; background-repeat: repeat;
+    background-color: #2b2b36;
+    border: 4px solid #6b6b80;
+    border-radius: 8px;
+    box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.95), 0 15px 30px rgba(0, 0, 0, 0.8);
+    height: 100%;
 }
 .item-inventario {
-    color: #b1d0b5; text-decoration: none; padding: 6px 10px; font-size: 8px;
-    border-bottom: 2px solid transparent; transition: 0.1s; 
+    text-decoration: none; position: relative;
+    display: flex; justify-content: center; align-items: center;
+    flex: 1; min-height: 0; width: 100%; overflow: visible; /* Permitimos que la imagen escalada sobresalga */
 }
-.item-inventario:hover, .item-inventario.select {
-    color: #f1c40f; border-bottom: 2px solid #f1c40f;
+.item-inventario img {
+    width: 95%;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: scale(1.35); /* Aumentamos el tamaño visual sin afectar el layout */
+    transition: transform 0.2s, filter 0.2s;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));
 }
+.item-inventario:hover img {
+    transform: scale(1.45); filter: drop-shadow(0 8px 12px rgba(244, 240, 216, 0.4));
+}
+/* Ya no necesitamos la etiqueta after flotante porque tu imagen ya trae el texto grande */
 
+/* Zona del Mapa */
 .zona-mapa {
-    flex-grow: 1; display: flex; justify-content: center; align-items: center; padding-bottom: 20px;
+    grid-area: map;
+    display: flex; justify-content: stretch; align-items: stretch;
+    min-height: 0;
 }
 .marco-grande {
-    width: 90%; max-width: 1000px; height: 100%; max-height: 500px;
+    width: 100%; box-sizing: border-box;
+    height: 100%;
     padding: 0; position: relative; overflow: hidden;
+    border: 4px solid #8b5a2b; border-radius: 8px; /* Marco limpio sin exagerar */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9);
 }
 
 .lienzo-overworld {
     width: 100%; height: 100%; position: relative;
-    background-color: #2b702e;
-    background-image: 
-        radial-gradient(#3a8a3f 15%, transparent 16%),
-        radial-gradient(#215c23 15%, transparent 16%);
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
-    image-rendering: pixelated;
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+    background-color: #0b1a0d; 
+    background-image: url(../images/imgs_index/MapaPrueba.png);
+    background-size: 100% 100%; background-position: center; background-repeat: no-repeat;
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.9);
 }
 
-.camino-tierra {
-    position: absolute; top: 30%; left: 10%; width: 80%; height: 40%;
-    background-color: #a37240;
-    border: 4px dashed #6b4724;
-    border-radius: 40px; opacity: 0.8;
+/* Locaciones */
+/* Animación para destacar locaciones interactuables */
+@keyframes flotarIslas {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
 }
 
 .locacion-mapa {
     position: absolute; display: flex; flex-direction: column; align-items: center;
-    text-decoration: none; transition: transform 0.1s; z-index: 5;
+    text-decoration: none; transition: transform 0.3s; z-index: 5;
+}
+.locacion-mapa::before {
+    content: ''; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
+    width: 90px; height: 25px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 80%);
+    z-index: -1; border-radius: 50%;
 }
 .locacion-mapa img {
-    height: 60px; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.5));
-    image-rendering: pixelated; transition: 0.2s;
+    height: clamp(85px, 18vh, 160px); 
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.8)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+    transition: 0.3s;
+    animation: flotarIslas 3s infinite ease-in-out;
 }
-
 .letrero {
-    background-color: rgba(0,0,0,0.85); color: white;
-    border: 2px solid #a37240; font-size: 8px; padding: 4px 6px;
-    margin-top: 5px; white-space: nowrap; border-radius: 3px;
-    box-shadow: 2px 2px 0 rgba(0,0,0,0.8);
+    background-color: rgba(20, 15, 10, 0.9); color: #f4f0d8;
+    border: 1px solid #a37240; border-radius: 4px;
+    font-size: clamp(8px, 1.2vh, 11px); padding: 0.8vh 1vw; margin-top: 1vh; white-space: nowrap; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.9); text-transform: uppercase; transition: 0.2s;
 }
+.locacion-mapa:hover { z-index: 10; transform: scale(1.2) translateY(-15px); }
+.locacion-mapa:hover img { 
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.9)) drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+    animation-play-state: paused; 
+}
+.locacion-mapa:hover .letrero { background-color: #3b2515; border-color: #d4af37; box-shadow: 0 6px 15px rgba(0,0,0,1); }
 
-.locacion-mapa:hover { transform: translateY(-5px); z-index: 10; }
-.locacion-mapa:hover img { filter: drop-shadow(0 10px 0px rgba(0,0,0,0.4)) drop-shadow(0 0 8px rgba(241, 196, 15, 0.4)); }
-.locacion-mapa:hover .letrero { border-color: #f1c40f; color: #f1c40f; }
+.loc-dados { top: 64%; left: 8%; }
+.loc-dados img { animation-delay: 0s; }
 
-.loc-dados { top: 20%; left: 15%; }
-.loc-posiciones { top: 50%; left: 40%; }
-.loc-ajedrez { top: 20%; left: 70%; }
-.loc-ej1 { top: 80%; left: 15%; }
-.loc-ej2 { top: 75%; left: 40%; }
-.loc-ej3 { top: 80%; left: 65%; }
-.loc-ej4 { top: 50%; left: 80%; }
-.loc-ej5 { top: 50%; left: 15%; }
+.loc-posiciones { top: 43%; left: 39%; }
+.loc-posiciones img { animation-delay: 0.6s; }
 
+.loc-ajedrez { top: 10%; left: 10%; }
+.loc-ajedrez img { animation-delay: 1.2s; }
+
+.loc-medias { top: 68%; left: 67%; }
+.loc-medias img { animation-delay: 1.8s; }
+
+.loc-webxml { top: 12%; left: 69%; }
+.loc-webxml img { animation-delay: 2.4s; }
+
+.loc-xml-tema10 { top: 40%; left: 75%; }
+.loc-xml-tema10 img { animation-delay: 3.0s; }
+
+/* NPC */
 .npc-guia {
-    position: absolute; bottom: 10px; right: 20px; z-index: 20;
+    position: absolute; bottom: 1vh; right: 2vw; z-index: 20;
 }
-.npc-guia img {
-    height: 50px; cursor: pointer; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.5));
-    animation: bounceIdle 2s infinite steps(2);
-}
-@keyframes bounceIdle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-
+.npc-guia img { height: clamp(50px, 10vh, 75px); cursor: pointer; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.7)); }
 .npc-guia::after {
-    content: attr(data-dialogo);
-    position: absolute; bottom: 70px; right: 0; width: 220px;
-    background-color: #0b1a0d; border: 4px solid #f1c40f;
-    color: white; font-family: 'Press Start 2P', monospace; font-size: 10px;
-    padding: 10px; line-height: 1.5; border-radius: 4px;
-    box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
-    opacity: 0; visibility: hidden; transition: 0.1s;
+    content: attr(data-dialogo); position: absolute; bottom: 85px; right: 0; width: 220px;
+    background-color: rgba(20, 15, 10, 0.95); border: 2px solid #a37240; border-radius: 6px;
+    color: #f4f0d8; font-size: 11px; padding: 12px; line-height: 1.5; box-shadow: 0 6px 15px rgba(0,0,0,0.9);
+    opacity: 0; visibility: hidden; transition: 0.2s;
 }
-.npc-guia:hover::after {
-    opacity: 1; visibility: visible;
+.npc-guia:hover::after { opacity: 1; visibility: visible; }
+
+/* Adapatabilidad para móviles para que no se rompa la web */
+@media (max-width: 1000px) {
+    body, html { overflow: auto; } /* En móviles sí necesitamos poder bajar con scroll */
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: "header" "nav" "map";
+        height: auto; min-height: 100vh;
+    }
+    .menu-inventario { justify-content: center; }
+    .menu-inventario .marco-madera {
+        flex-direction: row; flex-wrap: wrap; width: 100%; height: auto; padding: 15px;
+    }
+    .marco-grande {
+        height: 60vh; min-height: 400px;
+    }
 }

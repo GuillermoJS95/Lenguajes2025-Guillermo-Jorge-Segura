@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="concesionario.xsd"?>
+<concesionario>
+    <coche>
+        <marca>Toyota</marca>
+        <modelo>Corolla</modelo>
+        <matricula>1234-LBC</matricula>
+        <combustible>Híbrido</combustible>
+        <precio>24500</precio>
+        <color>rojo</color>
+    </coche>
+    <coche>
+        <marca>Volkswagen</marca>
+        <modelo>Golf</modelo>
+        <matricula>5678-KFX</matricula>
+        <combustible>Gasolina</combustible>
+        <precio_iva>28200</precio_iva>
+        <color>azul</color>
+    </coche>
+    <coche>
+        <marca>Tesla</marca>
+        <modelo>Model 3</modelo>
+        <matricula>9012-MXP</matricula>
+        <combustible>Eléctrico</combustible>
+        <color>verde</color>
+    </coche>
+</concesionario>

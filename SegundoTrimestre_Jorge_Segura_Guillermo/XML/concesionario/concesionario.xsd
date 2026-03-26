@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="concesionario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="coche" minOccurs= "1" maxOccurs = "3">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="marca" />
+                            <xs:element name="modelo" />
+                            <xs:element ref="matricula" />
+                            <xs:element name="combustible" />
+
+                            <xs:choice minOccurs="0">
+                                <xs:element name="precio" />	
+                                <xs:element name="precio_iva" />
+                            </xs:choice>
+
+                            <xs:element name="color">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                    <xs:enumeration value="rojo"/>
+                                    <xs:enumeration value="verde"/>
+                                    <xs:enumeration value="azul"/>
+                                    </xs:restriction>
+                                </xs:simpleType>  
+                            </xs:element>
+                            
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="matricula" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="banco">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tarjeta" minOccurs="1" maxOccurs="5">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="titular" />
+                            <xs:element ref="numero_tarjeta" />
+                            
+                            <xs:element name="marca">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="visa"/>
+                                        <xs:enumeration value="mastercard"/>
+                                        <xs:enumeration value="american express"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="caducidad" />
+
+                            <xs:choice>
+                                <xs:element name="limite_credito" />    
+                                <xs:element name="saldo_disponible" />
+                            </xs:choice>
+
+                            <xs:element name="cvv" />
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="numero_tarjeta" type="xs:string"/>
+</xs:schema>

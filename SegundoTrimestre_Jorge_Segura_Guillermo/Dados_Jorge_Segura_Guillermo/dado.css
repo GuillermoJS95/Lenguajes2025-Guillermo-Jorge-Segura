@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #eecccc;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .dado-container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% ;
+        grid-template-areas:
+          'dado1 dado2 dado3'
+          'dado4 dado5 dado6';
+          gap: 80px;
+  }
+
+.dado-borde-dentro{
+   width: 100px;
+   height: 100px;
+   background-color: white;
+   margin: auto;
+   border-radius: 10px;
+}
+
+
+   .dado {
+    width: 110px;
+    height: 110px;
+    background-color: #dbdbdb;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(0, 0, 0);
+   
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .punto {
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  }
+  
+  .punto-centro {
+    top: 40%;
+    left: 40%;
+  }
+
+  .punto-abajo-derecha{
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .punto-arriba-izquierda {
+    top: 10%;
+    left: 10%;
+  }
+  
+  .punto-arriba-derecha {
+    top: 10%;
+    right: 10%;
+  }
+  
+  .punto-centro-izquierda {
+    top: 40%;
+    left: 10%;  
+  }
+  
+  .punto-centro-derecha {
+    top: 40%;
+    right: 10%;
+  }
+  
+  .punto-abajo-izquierda {
+    bottom: 10%;
+    left: 10%;
+  }
+
+  /* RPG Button for consistency */
+  .boton-volver-retro {
+    display: inline-block;
+    background-color: #5c3a21;
+    color: #f1c40f;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 4px solid #8b5a2b;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    box-shadow: 4px 4px 0px #000;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .boton-volver-retro:hover { background-color: #6d4a2d; }
+

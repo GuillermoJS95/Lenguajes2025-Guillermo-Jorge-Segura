@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="tarjeta_credito.xsd">
+    
+    <tarjeta>
+        <titular>CARLOS RODRIGUEZ</titular>
+        <numero_tarjeta>4000 5555 6666 7777</numero_tarjeta>
+        <marca>visa</marca>
+        <caducidad>08/30</caducidad>
+        <limite_credito>5000</limite_credito>
+        <cvv>987</cvv>
+    </tarjeta>
+
+    <tarjeta>
+        <titular>ANA MARTINEZ</titular>
+        <numero_tarjeta>5234 1111 2222 3333</numero_tarjeta>
+        <marca>mastercard</marca>
+        <caducidad>11/26</caducidad>
+        <saldo_disponible>2100.75</saldo_disponible>
+        <cvv>654</cvv>
+    </tarjeta>
+
+</banco>

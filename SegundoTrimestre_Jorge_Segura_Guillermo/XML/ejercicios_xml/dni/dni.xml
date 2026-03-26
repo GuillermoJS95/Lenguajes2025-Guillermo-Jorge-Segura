@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dni.xsd">
+    
+    <persona>
+        <nombre>Roberto</nombre>
+        <apellidos>Sánchez Ruiz</apellidos>
+        <numero_nif>45678901K</numero_nif>
+        <nacionalidad>Española</nacionalidad>
+        <fecha_nacimiento>1985-11-12</fecha_nacimiento>
+        <sexo>Hombre</sexo>
+    </persona>
+
+    <persona>
+        <nombre>Elena</nombre>
+        <apellidos>Belmonte Cano</apellidos>
+        <numero_nif>33445566M</numero_nif>
+        <nacionalidad>Española</nacionalidad>
+        <edad>32</edad>
+        <sexo>Mujer</sexo>
+    </persona>
+
+</dni>

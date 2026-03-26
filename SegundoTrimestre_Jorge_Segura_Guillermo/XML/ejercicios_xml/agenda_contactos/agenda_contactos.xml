@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agenda_contactos.xsd">
+    <contacto>
+        <nombre>Ricardo</nombre>
+        <apellido>Mendoza</apellido>
+        <telefono>+34 655444333</telefono>
+        <email>r.mendoza@empresa.es</email>
+        <categoria>Trabajo</categoria>
+    </contacto>
+
+    <contacto>
+        <nombre>Lucía</nombre>
+        <apellido>Torres</apellido>
+        <telefono>934887766</telefono>
+        <email>lucia.torres@gmail.com</email>
+        <categoria>Amigos</categoria>
+    </contacto>
+</agenda>

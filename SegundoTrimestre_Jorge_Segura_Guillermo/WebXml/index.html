@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guillermo Jorge Segura">
+    <title>Resumen Tema 12: Conversión de Documentos XML</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        header {
+            background-color: #004a87;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #004a87;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .code-box {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            border-top: 1px solid #ccc;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #004a87;
+            font-weight: bold;
+        }
+        .nav-links a:hover { text-decoration: underline; }
+
+        /* RPG Button for consistency */
+        .boton-volver-retro {
+            display: inline-block;
+            background-color: #5c3a21;
+            color: #f1c40f;
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 4px solid #8b5a2b;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            box-shadow: 4px 4px 0px #000;
+            margin-top: 20px;
+            transition: 0.1s;
+        }
+        .boton-volver-retro:hover { background-color: #6d4a2d; transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Conversión y Adaptación de Documentos XML</h1>
+        <p><strong>¿Qué es XPath?</strong> Es un lenguaje diseñado para navegar a través de los nodos de un árbol XML, permitiendo localizar elementos, extraer datos y realizar cálculos mediante rutas jerárquicas.</p>
+    </header>
+
+    <section>
+        <h2>1. Lenguajes de Transformación (XSL)</h2>
+        <p>El estándar XSL (Extensible Stylesheet Language) se divide en tres partes principales:</p>
+        <ul>
+            <li><strong>XPath:</strong> Localización de elementos en el árbol XML.</li>
+            <li><strong>XSLT:</strong> Transformación del documento original a otros formatos como HTML o XML.</li>
+            <li><strong>XSL-FO:</strong> Aplicación de estilos para formatos de impresión, comúnmente PDF.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. El Árbol XML y su Sintaxis</h2>
+        <p>XPath ve los documentos como una jerarquía de nodos: raíz (/), elementos, atributos (@) y texto.</p>
+        <div class="code-box">
+            //coche[@matricula="1234ABC"]/marca/text()
+        </div>
+        <table>
+            <tr>
+                <th>Símbolo</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Selección desde la raíz.</td>
+            </tr>
+            <tr>
+                <td>//</td>
+                <td>Selección en cualquier parte del documento.</td>
+            </tr>
+            <tr>
+                <td>@</td>
+                <td>Selección de atributos.</td>
+            </tr>
+            <tr>
+                <td>[]</td>
+                <td>Predicados o condiciones de filtrado.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>3. Formatos de Intercambio de Datos</h2>
+        <p>Además de XML, existen otros formatos clave analizados en el curso:</p>
+        <ul>
+            <li><strong>JSON:</strong> Ligero, basado en pares clave-valor, muy usado en APIs.</li>
+            <li><strong>CSV:</strong> Formato tabular simple separado por comas o delimitadores.</li>
+            <li><strong>YAML:</strong> Basado en la indentación, ideal para archivos de configuración.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="boton-volver-retro">Volver al Mapa</a>
+        <p style="margin-top: 30px; color: #666; font-size: 0.9rem;">Guillermo Jorge Segura</p>
+    </footer>
+
+</body>
+</html>

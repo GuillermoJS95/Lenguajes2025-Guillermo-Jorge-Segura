@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="menu_restaurante.xsd">
+    <plato>
+        <nombre>Menú del Día</nombre>
+        <precio>11.90</precio>
+        <primero>gazpacho andaluz</primero>
+        <segundo>merluza a la plancha</segundo>    
+    </plato>
+
+    <plato>
+        <nombre>Combinado Gourmet</nombre>
+        <precio>18.50</precio>
+        <primero>ensalada de burrata</primero>
+        <segundo>entrecot de ternera</segundo>
+    </plato>
+</menu>

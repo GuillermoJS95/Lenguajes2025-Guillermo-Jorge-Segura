@@ -1,0 +1,103 @@
+* {
+  font-family: verdana;
+  font-size: 1.25 rem;
+}
+
+body {
+  margin: 0;
+  background-image: url(../images/fondo_ajedrez.jpg);
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  background-color: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #555;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #ffb700;
+    transform: scale(1.10);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+a {
+  color: white;
+}
+img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.alreves {
+  transform: rotate(180deg);
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td,
+th {
+  width: 100px;
+  height: 100px;
+}
+
+.claro {
+  background-image: url(../images/madera_blanca.png);
+}
+
+.marron {
+  background-image: url(../images/madera_oscura.png);
+}
+
+.bordes {
+  background-image: url(../images/madera_borde.jpg);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
