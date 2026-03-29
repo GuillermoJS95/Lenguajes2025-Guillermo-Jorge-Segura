@@ -53,19 +53,19 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* Fluid Layout with Flexbox */
+
 .contenedor-tablero {
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    max-width: 800px; /* Keep it constrained for large screens */
+    max-width: 800px; 
     margin: 40px auto;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.8);
 }
 
 .bordes, .celda {
-    flex: 0 0 10%; /* 10 cells per row */
-    aspect-ratio: 1; /* Make them squares */
+    flex: 0 0 10%; 
+    aspect-ratio: 1; 
     color: white;
     font-size: clamp(12px, 2vw, 20px);
     font-weight: bold;

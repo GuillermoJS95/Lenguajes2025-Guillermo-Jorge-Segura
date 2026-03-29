@@ -2,7 +2,7 @@ body, html {
     margin: 0; padding: 0; width: 100%; height: 100%;
     background-color: #000;
     color: #f4f0d8; font-family: 'Press Start 2P', monospace;
-    overflow: hidden; /* Avoid scroll */
+    overflow: hidden; 
     box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -11,29 +11,29 @@ body, html {
 
 .contenedor-principal {
     display: grid;
-    justify-content: center; /* Centramos todo el bloque de la cuadrícula en la pantalla */
+    justify-content: center; 
     align-content: stretch;
-    grid-template-columns: 220px minmax(600px, 1200px); /* Tamaño original del sidebar */
+    grid-template-columns: 220px minmax(600px, 1200px); 
     grid-template-rows: auto 1fr;
     grid-template-areas: 
         "header header"
         "nav map";
-    gap: 15px; /* Separación un poco más corta entre menú y mapa */
-    padding: 2vh 2vw; /* Aire dinámico con base a la pantalla */
-    height: 100vh; /* Que ocupe 100 de la pantalla exacto, sin scrolling */
+    gap: 15px; 
+    padding: 2vh 2vw; 
+    height: 100vh; 
     min-height: 0;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/imgs_index/MapaFondo.png);
     background-size: 100% 100%; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
 
-/* Header */
+
 .cabecera-jrpg {
     grid-area: header;
     display: flex; justify-content: center; width: 100%;
 }
 .cabecera-jrpg .marco-madera {
     display: flex; justify-content: space-between; align-items: center;
-    width: 100%; height: 10vh; min-height: 60px; max-height: 90px; /* Se autoajustará */
+    width: 100%; height: 10vh; min-height: 60px; max-height: 90px; 
     box-sizing: border-box;
     padding: 0 4vw;
     background-image: url(../images/imgs_index/TexturaMadera.png);
@@ -53,21 +53,21 @@ body, html {
 }
 .boton-accion:hover { background-color: #5c3b20; transform: translateY(-2px); }
 
-/* Menú Sidebar: Dispuesto en vertical junto al mapa */
+
 .menu-inventario {
     grid-area: nav;
-    display: flex; justify-content: flex-start; /* Rellena la columna */
-    align-items: stretch; /* Rellena el height igual al mapa */
+    display: flex; justify-content: flex-start;
+    align-items: stretch; 
     min-height: 0;
 }
 .menu-inventario .marco-madera {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Aprovecha su columna de grid por completo para reducir el gap excesivo */
+    width: 100%; 
     justify-content: space-evenly;
     box-sizing: border-box;
-    padding: 2vh 0; /* Dinámico */
+    padding: 2vh 0; 
     gap: 1.5vh;
     background-image: url(../images/imgs_index/TexturaPiedra.png);
     background-size: cover; background-position: center; background-repeat: repeat;
@@ -80,7 +80,7 @@ body, html {
 .item-inventario {
     text-decoration: none; position: relative;
     display: flex; justify-content: center; align-items: center;
-    flex: 1; min-height: 0; width: 100%; overflow: visible; /* Permitimos que la imagen escalada sobresalga */
+    flex: 1; min-height: 0; width: 100%; overflow: visible; 
 }
 .item-inventario img {
     width: 95%;
@@ -88,16 +88,14 @@ body, html {
     max-height: 100%;
     height: auto;
     object-fit: contain;
-    transform: scale(1.35); /* Aumentamos el tamaño visual sin afectar el layout */
+    transform: scale(1.35); 
     transition: transform 0.2s, filter 0.2s;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));
 }
 .item-inventario:hover img {
     transform: scale(1.45); filter: drop-shadow(0 8px 12px rgba(244, 240, 216, 0.4));
 }
-/* Ya no necesitamos la etiqueta after flotante porque tu imagen ya trae el texto grande */
 
-/* Zona del Mapa */
 .zona-mapa {
     grid-area: map;
     display: flex; justify-content: stretch; align-items: stretch;
@@ -107,7 +105,7 @@ body, html {
     width: 100%; box-sizing: border-box;
     height: 100%;
     padding: 0; position: relative; overflow: hidden;
-    border: 4px solid #8b5a2b; border-radius: 8px; /* Marco limpio sin exagerar */
+    border: 4px solid #8b5a2b; border-radius: 8px; 
     box-shadow: 0 15px 40px rgba(0,0,0,0.9);
 }
 
@@ -119,8 +117,7 @@ body, html {
     box-shadow: inset 0 0 80px rgba(0,0,0,0.9);
 }
 
-/* Locaciones */
-/* Animación para destacar locaciones interactuables */
+
 @keyframes flotarIslas {
     0% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
@@ -174,7 +171,7 @@ body, html {
 .loc-xml-tema10 { top: 40%; left: 75%; }
 .loc-xml-tema10 img { animation-delay: 3.0s; }
 
-/* NPC */
+
 .npc-guia {
     position: absolute; bottom: 1vh; right: 2vw; z-index: 20;
 }
@@ -187,9 +184,9 @@ body, html {
 }
 .npc-guia:hover::after { opacity: 1; visibility: visible; }
 
-/* Adapatabilidad para móviles para que no se rompa la web */
+
 @media (max-width: 1000px) {
-    body, html { overflow: auto; } /* En móviles sí necesitamos poder bajar con scroll */
+    body, html { overflow: auto; } 
     .contenedor-principal {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr;
