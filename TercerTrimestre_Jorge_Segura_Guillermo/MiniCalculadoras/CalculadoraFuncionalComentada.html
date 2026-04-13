@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Funcional</title>
+</head>
+
+<body>
+    <label>Primer número: <input type="number" id="numero1"></label><br>
+    <label>Segundo número: <input type="number" id="numero2"></label><br>
+    <button id="calcularBtn">Calcular</button><br>
+    <div>La suma es: <span id="suma"></span></div>
+    <div>El producto es: <span id="producto"></span></div>
+    <div>El número mayor es: <span id="mayor"></span></div>
+
+    <script>
+        // 1. HERRAMIENTAS (Abstracción): Creamos funciones que hacen una sola cosa bien
+        // getNumber recibe un ID y devuelve el número que contiene ese input
+        const getNumber = (id) => Number(document.getElementById(id).value);
+
+        // setText recibe un ID y un valor, y lo imprime en pantalla
+        const setText = (id, value) => document.getElementById(id).textContent = value;
+
+        // 2. LÓGICA DE NEGOCIO: La función principal es ahora mucho más clara
+        const calcular = () => {
+            // Desestructuración: asignamos numero1 y numero2 en una sola línea de código
+            const [numero1, numero2] = [getNumber("numero1"), getNumber("numero2")];
+
+            // Diccionario de operaciones: tratamos las fórmulas como datos
+            const operaciones = {
+                suma: (a, b) => a + b,
+                producto: (a, b) => a * b,
+                mayor: (a, b) => (a === b ? "Los números son iguales" : Math.max(a, b))
+            };
+
+            // 3. EJECUCIÓN: Aplicamos las funciones de utilidad con los resultados de 'operaciones'
+            setText("suma", operaciones.suma(numero1, numero2));
+            setText("producto", operaciones.producto(numero1, numero2));
+            setText("mayor", operaciones.mayor(numero1, numero2));
+        };
+
+        // Vinculamos el evento al botón
+        document.getElementById("calcularBtn").addEventListener("click", calcular);
+
+        document.getElementById("calcularBtn").addEventListener("click", calcular);
+    </script>
+</body>
+
+</html>

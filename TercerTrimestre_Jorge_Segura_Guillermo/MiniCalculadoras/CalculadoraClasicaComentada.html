@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Funcional</title>
+</head>
+
+<body>
+  <label>Primer número: <input type="number" id="numero1"></label><br>
+  <label>Segundo número: <input type="number" id="numero2"></label><br>
+  <button onclick="calcular()">Calcular</button><br>
+  <div>La suma es: <span id="suma"></span></div>
+  <div>El producto es: <span id="producto"></span></div>
+  <div>El número mayor es: <span id="mayor"></span></div>
+
+  <script>
+    // Definimos la función principal que el botón del HTML llamará directamente
+    function calcular() {
+      // 1. CAPTURA DE DATOS: Accedemos al DOM para leer el valor del primer input
+      // Usamos Number() para asegurar que el texto se convierta en un valor numérico
+      const numero1 = Number(document.getElementById("numero1").value);
+
+      // Hacemos lo mismo con el segundo input
+      const numero2 = Number(document.getElementById("numero2").value);
+
+      // 2. PROCESAMIENTO: Realizamos las operaciones matemáticas básicas
+      // La suma se define como $S = n_1 + n_2$
+      const suma = numero1 + numero2;
+      // El producto se define como $P = n_1 \times n_2$
+      const producto = numero1 * numero2;
+
+      // 3. LÓGICA DE COMPARACIÓN: Usamos una estructura condicional clásica (if/else)
+      let mayor; // Declaramos la variable que guardará el resultado
+
+      if (numero1 > numero2) {
+        mayor = numero1; // Caso: el primero es mayor
+      } else if (numero2 > numero1) {
+        mayor = numero2; // Caso: el segundo es mayor
+      } else {
+        mayor = "Los números son iguales"; // Caso de empate
+      }
+
+      // 4. SALIDA DE DATOS: Volvemos al DOM para escribir los resultados en los 'span'
+      document.getElementById("suma").textContent = suma;
+      document.getElementById("producto").textContent = producto;
+      document.getElementById("mayor").textContent = mayor;
+    }
+
+    document.getElementById("suma").textContent = suma;
+    document.getElementById("producto").textContent = producto;
+    document.getElementById("mayor").textContent = mayor;
+
+  </script>
+</body>
+
+</html>

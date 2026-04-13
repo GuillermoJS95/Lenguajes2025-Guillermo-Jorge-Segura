@@ -1,0 +1,46 @@
+100 %
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Moderna</title>
+</head>
+
+<body>
+    <label>Primer número: <input type="number" id="numero1"></label><br>
+    <label>Segundo número: <input type="number" id="numero2"></label><br>
+    <button id="calcularBtn">Calcular</button><br>
+    <div>La suma es: <span id="suma"></span></div>
+    <div>El producto es: <span id="producto"></span></div>
+    <div>El número mayor es: <span id="mayor"></span></div>
+
+    <script>
+        // Usamos addEventListener para 'escuchar' el clic sin ensuciar el HTML con atributos onclick
+        document.getElementById("calcularBtn").addEventListener("click", () => {
+
+            // CAPTURA: Obtenemos los valores igual que en la clásica
+            const numero1 = Number(document.getElementById("numero1").value);
+            const numero2 = Number(document.getElementById("numero2").value);
+
+            // OPERACIONES: Usamos constantes (const) porque estos valores no cambiarán después
+            const suma = numero1 + numero2;
+            const producto = numero1 * numero2;
+
+            // LÓGICA AVANZADA: Usamos el Operador Ternario y la librería Math
+            // El ternario funciona como: (condición) ? (si es verdad) : (si es falso)
+            // Math.max(a, b) devuelve automáticamente el mayor de dos números
+            const mayor = numero1 === numero2
+                ? "Los números son iguales"
+                : Math.max(numero1, numero2);
+
+            // SALIDA: Actualizamos el texto de la interfaz
+            document.getElementById("suma").textContent = suma;
+            document.getElementById("producto").textContent = producto;
+            document.getElementById("mayor").textContent = mayor;
+        });
+    </script>
+</body>
+
+</html>

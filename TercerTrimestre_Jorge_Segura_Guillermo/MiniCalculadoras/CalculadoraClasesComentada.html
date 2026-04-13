@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora con Clases</title>
+</head>
+
+<body>
+    <label>Primer número: <input type="number" id="numero1"></label><br>
+    <label>Segundo número: <input type="number" id="numero2"></label><br>
+    <button id="calcularBtn">Calcular</button><br>
+    <div>La suma es: <span id="suma"></span></div>
+    <div>El producto es: <span id="producto"></span></div>
+    <div>El número mayor es: <span id="mayor"></span></div>
+
+    <script>
+        // Definimos la 'plantilla' o molde de nuestra calculadora
+        class Calculadora {
+            // El constructor inicializa el objeto y guarda las referencias a los elementos HTML
+            // Así no tenemos que buscarlos en el DOM cada vez que el usuario haga clic
+            constructor(numero1Id, numero2Id, sumaId, productoId, mayorId) {
+                this.numero1Input = document.getElementById(numero1Id);
+                this.numero2Input = document.getElementById(numero2Id);
+                this.sumaOutput = document.getElementById(sumaId);
+                this.productoOutput = document.getElementById(productoId);
+                this.mayorOutput = document.getElementById(mayorId);
+            }
+
+            // Método privado/auxiliar para obtener el valor numérico
+            obtenerNumero(input) {
+                return Number(input.value);
+            }
+
+            // Método que coordina el cálculo
+            calcular() {
+                const n1 = this.obtenerNumero(this.numero1Input);
+                const n2 = this.obtenerNumero(this.numero2Input);
+
+                // Llamamos al método que se encarga de la parte visual
+                this.mostrarResultados(n1, n2);
+            }
+
+            // Método que gestiona la salida de datos
+            mostrarResultados(a, b) {
+                this.sumaOutput.textContent = a + b;
+                this.productoOutput.textContent = a * b;
+                this.mayorOutput.textContent = a === b ? "Iguales" : Math.max(a, b);
+            }
+        }
+
+        // Creamos una 'instancia' real de la calculadora pasándole los IDs del HTML
+        const miCalculadora = new Calculadora("numero1", "numero2", "suma", "producto", "mayor");
+
+        // Al hacer clic, le pedimos al objeto miCalculadora que ejecute su método calcular
+        document.getElementById("calcularBtn").addEventListener("click", () => miCalculadora.calcular());
+    </script>
+</body>
+
+</html>
